@@ -1,0 +1,37 @@
+@* create view page *@
+
+@model Pet
+
+<div class="container w-75 mx-auto">
+    <h1>New Pet</h1>
+    <form asp-action="CreatePet" asp-controller="Pet" method="pet" class="shadow p-3 rounded">
+        @* section *@
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" type="text" class="form-control"/>
+            <span asp-validation-for="Name" class="text-danger font-weight-bold"></span>
+        </div>
+        @* section *@
+        <div class="mb-3">
+            <label asp-for="PetType"></label>
+            <input asp-for="PetType" type="text" class="form-control"/>
+            <span asp-validation-for="PetType" class="text-danger font-weight-bold"></span>
+        </div>
+        @* section *@
+        <div class="mb-3">
+            <label asp-for="Age"></label>
+            <input asp-for="Age" type="text" class="form-control"/>
+            <span asp-validation-for="Age" class="text-danger font-weight-bold"></span>
+        </div>
+        @* section *@
+        <div class="mb-3">
+            <label asp-for="HasFur"></label>
+            <input asp-for="HasFur" type="text" class="form-control"/>
+            <span asp-validation-for="HasFur" class="text-danger font-weight-bold"></span>
+        </div>
+    <button class="btn btn-outline-dark">Submit</button>
+
+    </form>
+
+
+</div>
